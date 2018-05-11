@@ -1,9 +1,14 @@
 {
   "name": "koa-demos",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a collection of simple demos of Koa",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:builddev": "docker image build -t koa-demos:1.0.2 ./",
+    "docker:runbash": "docker container run --rm -p 8000:3000 -it koa-demos:1.0.2 /bin/bash",
+    "docker:runCMD": "docker container run --rm -p 8000:3000 -it koa-demos:1.0.2",
+    "docker:buildpublish": "docker image build -t tianyn1990/koa-demos:1.0.2 ./",
+    "docker:publish": "docker image push tianyn1990:koa-demos:1.0.2"
   },
   "keywords": ["Koa", "Node"],
   "author": "Ruan Yifeng",
